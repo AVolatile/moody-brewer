@@ -83,19 +83,23 @@ body {
 
 /* === Review Cards === */
 .review-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ✅ centers child cards */
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
 .review-card {
   background: rgba(75, 43, 48, 0.9);
-  padding: 1.5rem;
-  border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease;
+  padding: 1.2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 340px; /* ✅ keeps a clean, narrow layout */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 
 .review-card:hover {
   transform: translateY(-5px);
@@ -219,4 +223,10 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .review-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
