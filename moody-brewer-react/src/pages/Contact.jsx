@@ -13,20 +13,24 @@ const Contact = () => {
       <Navbar />
 
       <main className="contact-content">
-        <h1>Contact Us</h1>
-        <p className="intro">Have questions, suggestions, or just want to say hello? Drop us a line!</p>
+        <div className="contact-box">
+          <h1 className="contact-title">Let’s Talk</h1>
+          <p className="contact-subtext">
+            Questions? Ideas? A story to share? We'd love to hear from you.
+          </p>
 
-        <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required />
-          <button type="submit">Send Message</button>
-        </form>
+          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" rows="5" placeholder="Your message..." required />
+            <button type="submit">Send</button>
+          </form>
 
-        <div className="contact-info">
-          <p><strong>Email:</strong> hello@themoodybrewer.com</p>
-          <p><strong>Phone:</strong> (401) 555-0123</p>
-          <p><strong>Address:</strong> 123 Brew Lane, Providence, RI</p>
+          <div className="contact-details">
+            <p><span>Email:</span> hello@themoodybrewer.com</p>
+            <p><span>Phone:</span> (401) 555-0123</p>
+            <p><span>Address:</span> 123 Brew Lane, Providence, RI</p>
+          </div>
         </div>
       </main>
     </div>

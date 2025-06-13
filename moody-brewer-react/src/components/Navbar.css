@@ -89,7 +89,7 @@
 @media screen and (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 0;
     right: 0;
     background-color: rgba(107, 61, 68, 0.85); /* 🟣 rosewood w/ tint */
@@ -105,7 +105,7 @@
 
   .nav-links.active {
     padding: 1.5rem 0;
-    max-height: 500px;
+    max-height: 550px;
   }
 
   .hamburger {

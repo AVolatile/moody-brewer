@@ -123,8 +123,12 @@ const Home = () => {
       </section>
 
       <footer className="home-footer">
-        <p>&copy; 2025 The Moody Brewer | Crafted with ❤️ in Rhode Island</p>
-      </footer>
+  <p>© 2025 The Moody Brewer | Crafted with ❤️ in Rhode Island</p>
+  <p className="footer-credit">
+    Website by <a href="https://volatile-solutions.netlify.app/" target="_blank" rel="noopener noreferrer">Volatile | Solutions</a>
+  </p>
+</footer>
+
     </div>
   );
 };
