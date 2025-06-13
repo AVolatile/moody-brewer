@@ -27,7 +27,10 @@ const Reviews = () => {
     }
   };
 
-  const filteredReviews = filter === 'all' ? reviews : reviews.filter(r => r.stars == filter);
+  const filteredReviews = filter === 'all'
+    ? reviews
+    : reviews.filter(r => r.stars == filter);
+
   const averageRating = reviews.length
     ? (reviews.reduce((sum, r) => sum + Number(r.stars), 0) / reviews.length).toFixed(1)
     : 0;
@@ -37,28 +40,13 @@ const Reviews = () => {
       <Navbar />
 
       <main className={`section reviews-page ${fadeIn ? 'fade-in' : ''}`}>
-        {/* === Social Style Video Post 1 === */}
-        <div className="social-card fade-overlay">
-          <div className="social-header">
-            <img src="/assets/images/main_logo.png" alt="Moody Brewer" className="profile-pic" />
-            <div>
-              <h4 className="profile-name">The Moody Brewer</h4>
-              <span className="post-time">2h ago</span>
-            </div>
-          </div>
-          <video className="video-post" autoPlay muted loop>
-            <source src="/assets/videos/ig-reel-2.mp4" type="video/mp4" />
-          </video>
-          <div className="post-caption">Fresh Brews, Honest Reviews ☕💬</div>
-          <div className="post-actions">
-            <img src="/assets/icons/like.png" alt="Like" className="icon" />
-            <img src="/assets/icons/comment.png" alt="Comment" className="icon" />
-          </div>
-        </div>
-
         <div className="reviews-container">
           <div className="home-button" onClick={() => navigate('/')}>
-            <img src="/assets/images/main_logo.png" alt="The Moody Brewer Logo" className="home-logo" />
+            <img
+              src="/assets/images/moody-logo-thin.png"
+              alt="The Moody Brewer Logo"
+              className="home-logo large"
+            />
           </div>
 
           <h1 className="page-title">What Our Customers Are Saying</h1>
@@ -67,7 +55,10 @@ const Reviews = () => {
             <span className="average-label">Average Rating</span>
             <div className="stars-display">
               {[...Array(5)].map((_, i) => (
-                <i key={i} className={`fa-star fa-${i < Math.round(averageRating) ? 'solid' : 'regular'}`} />
+                <i
+                  key={i}
+                  className={`fa-star fa-${i < Math.round(averageRating) ? 'solid' : 'regular'}`}
+                />
               ))}
               <span className="avg-number">{averageRating}</span>
             </div>
@@ -104,8 +95,7 @@ const Reviews = () => {
           </div>
         </div>
 
-        <section className="promo-section blog-style fade-overlay">
-          {/* === Social Style Video Post 2 === */}
+        {/* <section className="promo-section blog-style fade-overlay">
           <div className="social-card fade-overlay">
             <div className="social-header">
               <img src="/assets/images/main_logo.png" alt="Moody Brewer" className="profile-pic" />
@@ -123,7 +113,7 @@ const Reviews = () => {
               <img src="/assets/icons/comment.png" alt="Comment" className="icon" />
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );

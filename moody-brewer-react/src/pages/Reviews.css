@@ -179,3 +179,44 @@ body {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* === Home Button Logo in Center or Corner === */
+.home-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+
+.home-logo {
+  width: 90px;
+  height: auto;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+}
+
+.home-logo:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 8px rgba(245, 199, 157, 0.6));
+}
+
+.home-logo.small {
+  width: 60px;
+}
+
+.home-logo.medium {
+  width: 90px;
+}
+
+.home-logo.large {
+  width: 130px;
+}
+
+/* === Promo Section === */
+.promo-section {
+  margin: 4rem auto;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
