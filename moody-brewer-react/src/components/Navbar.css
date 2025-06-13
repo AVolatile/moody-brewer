@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
+
+.navbar {
+  font-family: 'Dancing Script', cursive;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  color: #f5c79d;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(43, 26, 30, 0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 42px;
+  border-radius: 10px;
+}
+
+.logo span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e86f92;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  color: #f5c79d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e86f92;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  height: 2px;
+  width: 24px;
+  background-color: #f5c79d;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === Mobile Styles === */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    padding: 1.5rem 0;
+    max-height: 500px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    padding: 0.75rem 0;
+  }
+}

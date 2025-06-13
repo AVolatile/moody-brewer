@@ -1,0 +1,74 @@
+.about-page {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  color: #f5c79d;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 26, 30, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+.about-section {
+  padding: 6rem 2rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+.about-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #e86f92;
+  margin-bottom: 2rem;
+}
+
+.about-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #f9e0cb;
+}
+
+.about-content span {
+  font-weight: bold;
+  color: #e86f92;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+  .about-section {
+    padding: 5rem 1.5rem 2rem;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
