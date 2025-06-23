@@ -1,10 +1,13 @@
 .about-page {
-  position: relative;
-  height: 100vh;
-  overflow-x: hidden;
-  color: #f5c79d;
-  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.about-section {
+  flex: 1; /* fills space between nav and footer */
+}
+
 
 .video-bg {
   position: fixed;
@@ -38,7 +41,7 @@
 .about-title {
   font-family: 'Dancing Script', cursive;
   font-size: 3rem;
-  color: #e86f92;
+  color: #f5c79d;
   margin-bottom: 2rem;
 }
 

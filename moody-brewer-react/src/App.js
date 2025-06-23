@@ -6,7 +6,7 @@ import Visit from './pages/Visit';
 import Menu from './pages/Menu';
 import About from './pages/About';      
 import Contact from './pages/Contact';  
-
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path="/visit" element={<Visit />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Reviews" element={<Reviews />} />
+        <Route path="/admin" element={<AdminDashboard />} />
 
 
       </Routes>

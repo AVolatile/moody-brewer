@@ -113,6 +113,112 @@ button, input, textarea {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* === Signature Bites Section === */
+.featured.bites {
+  background: rgba(255, 255, 255, 0.015);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 4rem 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card img {
+  max-height: 180px;
+}
+
+/* Optional tweak if you want food cards to have a slight variant */
+.feature-card.food-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f5c79d;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link i {
+  font-size: 1.4rem;
+  color: #e86f92;
+}
+
+.social-link:hover {
+  color: #e86f92;
+}
+
+.social-post {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.social-post-img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.post-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  color: #f5c79d;
+  margin-bottom: 1rem;
+}
+
+.like-button, .comment-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.like-button:hover {
+  transform: scale(1.1);
+}
+
+.like-button i.fa-heart {
+  color: #e86f92;
+}
+
+.comment-button {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.social-caption {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+
 /* Mobile Nav */
 @media (max-width: 768px) {
   .nav-links {
@@ -390,7 +496,7 @@ button, input, textarea {
 
 .hero-button {
   display: inline-block;
-  margin-top: 5rem;
+  margin-top: srem;
   margin-bottom: 2rem;
   padding: 0.75rem 2rem;
   background-color: #e86f92;
@@ -430,35 +536,6 @@ button, input, textarea {
   max-width: 800px;
   margin-top: 3rem;;
 }
-
-/* Footer */
-.home-footer {
-  background-color: rgba(43, 26, 30, 0.95);
-  color: #f5c79d;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 0.95rem;
-  margin-top: 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-credit {
-  font-size: 0.85rem;
-  color: #e86f92;
-  margin-top: 0.25rem;
-}
-
-.footer-credit a {
-  color: #e86f92;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.footer-credit a:hover {
-  text-decoration: underline;
-}
-
 
 /* Success Message (Review) */
 .success-message,
@@ -518,4 +595,264 @@ button, input, textarea {
   50% {
     transform: translate(-50%, 10px);
   }
+}
+/* About Redesign */
+.redesigned-about {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+.redesigned-about {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+/* === Updated About Layout === */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.about-text .hero-title {
+  font-size: 2.5rem;
+  color: #ffe1c5;
+}
+
+.about-text .hero-subtitle {
+  font-size: 1.2rem;
+  color: #ffb1c1;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.about-text .snippet-text {
+  color: #fbd3c2;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.about-image-frame {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  padding: 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.about-image-frame img {
+  width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* === Featured Section Enhancements === */
+.section-subtext {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #fbd3c2;
+  opacity: 0.85;
+}
+
+/* Optional: Subtle entry animation for cards */
+.feature-card {
+  animation: fadeInUp 0.7s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Seasonal Highlight Section === */
+.seasonal-highlight {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  margin: 4rem auto;
+  max-width: 800px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* === Moodboard / Gallery Strip === */
+.moodboard .gallery-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.gallery-strip img {
+  height: 200px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.gallery-strip img:hover {
+  transform: scale(1.05);
+}
+
+/* === Quotes Carousel (Simple stacked version) === */
+.quotes-carousel {
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 3rem 2rem;
+  border-radius: 18px;
+  max-width: 800px;
+  margin: 4rem auto;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.quote-box p {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #fbd3c2;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* === Loyalty CTA === */
+.loyalty-cta {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04));
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  margin: 4rem auto;
+  max-width: 800px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  flex-shrink: 0;
+  width: 240px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+.carousel-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  color: #f5c79d;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
 }

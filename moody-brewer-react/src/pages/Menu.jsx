@@ -91,9 +91,12 @@ const Menu = () => {
         ))}
       </section>
 
-      <footer className="menu-footer">
-        <p>&copy; 2025 The Moody Brewer | Menu curated for every mood.</p>
-      </footer>
+      <footer className="home-footer">
+  <p>© 2025 The Moody Brewer | Crafted with ❤️ in Rhode Island</p>
+  <p className="footer-credit">
+    Website by <a href="https://volatile-solutions.netlify.app/" target="_blank" rel="noopener noreferrer">Volatile | Solutions</a>
+  </p>
+</footer>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './About.css';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'; 
 
 const About = () => {
   const videoSources = [
@@ -51,7 +52,9 @@ const About = () => {
           </p>
         </div>
       </main>
+    <Footer />
     </div>
+
   );
 };
 
