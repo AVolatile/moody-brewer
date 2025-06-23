@@ -174,8 +174,8 @@ const toggleLike = () => {
       <a href="/menu" className="hero-button">Explore the Menu</a>
     </div>
     <div className="about-image-collage">
-  <img src="/assets/images/menu/tiramisu_latte.png" alt="Latte" className="collage-img img1" />
-  <img src="/assets/images/cheers_banner.png" alt="Cheers" className="collage-img img2" />
+  <img src="/assets/images/coffee_bagel.png" alt="Still" className="collage-img img1" />
+  <img src="/assets/images/family_fun.png" alt="Family" className="collage-img img2" />
   <img src="/assets/images/owner-hero.png" alt="Owner" className="collage-img img3" />
 </div>
 
