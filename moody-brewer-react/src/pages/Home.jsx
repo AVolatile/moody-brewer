@@ -91,11 +91,11 @@ const toggleLike = () => {
       </section>
 
       {/* Seasonal Feature */}
-      <section className="section seasonal-highlight">
+      {/* <section className="section seasonal-highlight">
         <h2 className="section-heading">This Month’s Mood</h2>
         <p className="section-subtext">Iced Honey Rose Latte — smooth, floral, and made for June afternoons.</p>
         <a href="/menu" className="hero-button">Try it before it's gone</a>
-      </section>
+      </section> */}
 
 {/* Customer Cheers Banner */}
 <section className="section cheers-banner">

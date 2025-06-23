@@ -938,3 +938,22 @@ button, input, textarea {
 .carousel-btn:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+.cheers-banner {
+  background-color: #ffffff;
+  color: #2b1a1e;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 4rem auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Override heading and subtext inside cheers-banner */
+.cheers-banner .section-heading {
+  color: #2b1a1e;
+}
+
+.cheers-banner .section-subtext {
+  color: #5c4a4a;
+  opacity: 0.85;
+}
