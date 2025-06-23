@@ -940,20 +940,46 @@ button, input, textarea {
 }
 
 .cheers-banner {
-  background-color: #ffffff;
-  color: #2b1a1e;
-  border-radius: 16px;
-  padding: 3rem 2rem;
-  margin: 4rem auto;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  background-color: #fef3f7;
+  padding: 6rem 1rem;
+  clip-path: polygon(0 4vh, 100% 0, 100% calc(100% - 4vh), 0 100%);
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  overflow: hidden;
 }
 
-/* Override heading and subtext inside cheers-banner */
+.cheers-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .cheers-banner {
+    padding: 8rem 2rem;
+  }
+}
+
 .cheers-banner .section-heading {
   color: #2b1a1e;
+  text-align: center;
 }
 
 .cheers-banner .section-subtext {
   color: #5c4a4a;
+  text-align: center;
   opacity: 0.85;
+}
+
+/* Inner Post Box */
+.social-post {
+  background-color: #ffffff;
+  color: #2b1a1e;
+  border-radius: 16px;
+  padding: 0.75rem;
+  max-width: 500px;
+  margin: 2rem auto 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }

@@ -98,51 +98,77 @@ const toggleLike = () => {
       </section> */}
 
 {/* Customer Cheers Banner */}
-<section className="section cheers-banner">
-  <h2 className="section-heading">The Moody Moment</h2>
-  <p className="section-subtext">Too good not to share.</p>
+<section className="cheers-banner">
+  <div className="cheers-banner-inner">
+    <h2 className="section-heading">The Moody Moment</h2>
+    <p className="section-subtext">Too good not to share.</p>
 
-  <div className="social-post">
-    {/* Header with logo and handle */}
-    <div className="post-header">
+    <div className="social-post">
+      {/* Header with logo and handle */}
+      <div className="post-header">
+        <img
+          src="/assets/images/owner-hero.png"
+          alt="Owner profile"
+          className="post-avatar"
+        />
+        <a
+          className="post-handle"
+          href="https://www.instagram.com/them00dybrewer/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Visit our Instagram"
+        >
+          @them00dybrewer
+        </a>
+      </div>
+
+      <hr className="post-divider" />
+
+      {/* Post Image */}
       <img
-        src="/assets/images/owner-hero.png"
-        alt="Owner profile"
-        className="post-avatar"
+        src="/assets/images/cheers_banner.png"
+        alt="Cheers with drinks in front of The Moody Brewer"
+        className="social-post-img"
       />
-      <a
-  className="post-handle"
-  href="https://www.instagram.com/them00dybrewer/"
-  target="_blank"
-  rel="noopener noreferrer"
-  title="Visit our Instagram"
->
-  @them00dybrewer
-</a>
 
-    </div>
+      {/* Post actions */}
+      <div className="post-actions">
+        <span className="like-button" onClick={() => toggleLike()}>
+          <i className={`fa${liked ? 's' : 'r'} fa-heart`}></i>
+          <span>{likes}</span>
+        </span>
+        <span className="comment-button" title="Comments coming soon!">
+          <i className="far fa-comment"></i>
+        </span>
+      </div>
 
-    <hr className="post-divider" />
-
-    {/* Post Image */}
-    <img
-      src="/assets/images/cheers_banner.png"
-      alt="Cheers with drinks in front of The Moody Brewer"
-      className="social-post-img"
-    />
-
-    {/* Post actions */}
-    <div className="post-actions">
-      <span className="like-button" onClick={() => toggleLike()}>
-        <i className={`fa${liked ? 's' : 'r'} fa-heart`}></i>
-        <span>{likes}</span>
-      </span>
-      <span className="comment-button" title="Comments coming soon!">
-        <i className="far fa-comment"></i>
-      </span>
+      {/* Social links */}
+      <div className="social-caption">
+        <a
+          className="social-link"
+          href="https://www.instagram.com/them00dybrewer/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Follow us on Instagram"
+        >
+          <i className="fab fa-instagram"></i>
+          @them00dybrewer
+        </a>
+        <a
+          className="social-link"
+          href="https://www.facebook.com/people/The-Moody-Brewer/61569217047077/?_rdr"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Find us on Facebook"
+        >
+          <i className="fab fa-facebook"></i>
+          The Moody Brewer
+        </a>
+      </div>
     </div>
   </div>
 </section>
+
 
 
       {/* About Snippet */}
