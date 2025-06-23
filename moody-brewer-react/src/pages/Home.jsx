@@ -90,13 +90,6 @@ const toggleLike = () => {
         </a>
       </section>
 
-      {/* Seasonal Feature */}
-      {/* <section className="section seasonal-highlight">
-        <h2 className="section-heading">This Month’s Mood</h2>
-        <p className="section-subtext">Iced Honey Rose Latte — smooth, floral, and made for June afternoons.</p>
-        <a href="/menu" className="hero-button">Try it before it's gone</a>
-      </section> */}
-
 {/* Customer Cheers Banner */}
 <section className="cheers-banner">
   <div className="cheers-banner-inner">
@@ -169,24 +162,26 @@ const toggleLike = () => {
   </div>
 </section>
 
+{/* About Snippet */}
+<section id="about" className="about-snippet improved-about">
+  <div className="about-container">
+    <div className="about-text">
+      <h1 className="hero-title">The Moody Brewer</h1>
+      <p className="hero-subtitle">Where every sip tells a story.</p>
+      <p className="snippet-text">
+        At The Moody Brewer, we blend passion and flavor to create moments worth savoring. Whether you're sipping a lavender lemonade or warming up with a tiramisu latte, our drinks are designed to match your mood.
+      </p>
+      <a href="/menu" className="hero-button">Explore the Menu</a>
+    </div>
+    <div className="about-image-collage">
+  <img src="/assets/images/menu/tiramisu_latte.png" alt="Latte" className="collage-img img1" />
+  <img src="/assets/images/cheers_banner.png" alt="Cheers" className="collage-img img2" />
+  <img src="/assets/images/owner-hero.png" alt="Owner" className="collage-img img3" />
+</div>
 
+  </div>
+</section>
 
-      {/* About Snippet */}
-      <section id="about" className="about-snippet updated-layout">
-        <div className="about-container">
-          <div className="about-text">
-            <h1 className="hero-title">The Moody Brewer</h1>
-            <p className="hero-subtitle">Where every sip tells a story.</p>
-            <p className="snippet-text">
-              At The Moody Brewer, we blend passion and flavor to create moments worth savoring. Whether you're sipping a lavender lemonade or warming up with a tiramisu latte, our drinks are designed to match your mood.
-            </p>
-            <a href="/menu" className="hero-button">Explore the Menu</a>
-          </div>
-          <div className="about-image-frame">
-            <img src="/assets/images/menu/tiramisu_latte.png" alt="Moody Drink" />
-          </div>
-        </div>
-      </section>
 
       {/* Photo Moodboard */}
       <section className="section moodboard">
