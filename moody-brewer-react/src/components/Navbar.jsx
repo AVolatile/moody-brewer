@@ -36,7 +36,7 @@ const Navbar = () => {
         <a onClick={closeMenu} href="/menu">Menu</a>
         <a onClick={closeMenu} href="/about">About</a>
         <a onClick={closeMenu} href="/visit">Visit Us</a>
-        <a onClick={closeMenu} href="/contact">Contact</a>
+        {/* <a onClick={closeMenu} href="/contact">Contact</a> */}
         <a onClick={closeMenu} href="/reviews">Reviews</a>
       </div>
     </nav>
