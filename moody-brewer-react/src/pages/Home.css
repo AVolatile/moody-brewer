@@ -204,27 +204,7 @@ button, input, textarea {
   }
 }
 
-
-/* === Signature Bites Section === */
-.featured.bites {
-  background: rgba(255, 255, 255, 0.015);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 4rem 2rem;
-  margin-top: 2rem;
-}
-
-.feature-card img {
-  max-height: 180px;
-}
-
-/* Optional tweak if you want food cards to have a slight variant */
-.feature-card.food-card {
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
+/* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
@@ -311,6 +291,7 @@ button, input, textarea {
   padding: 0.5rem 0.75rem 0.25rem;
   font-size: 0.95rem;
 }
+
 /* === Social Media Style Post === */
 .social-post {
   background: rgba(255, 255, 255, 0.02);
@@ -1215,3 +1196,24 @@ button, input, textarea {
   font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    height: auto !important;
+    padding-bottom: 1rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .hero-button {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .testimonial-section {
+    margin-top: 0 !important;
+    padding-top: 1rem !important;
+  }
+}
