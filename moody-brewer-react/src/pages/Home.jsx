@@ -180,6 +180,25 @@ const toggleLike = () => {
 </div>
   </div>
 </section>
+      {/* Customer Testimonials */}
+<section className="testimonial-section">
+  <h2 className="section-heading">What People Are Saying</h2>
+  <div className="testimonials">
+    <div className="testimonial">
+      <p className="quote">“Best lavender lemonade I’ve ever had. The vibe here is unmatched!”</p>
+      <span className="author">– Jordan M.</span>
+    </div>
+    <div className="testimonial">
+      <p className="quote">“The baristas here just get it. Every sip felt like a warm hug.”</p>
+      <span className="author">– Sam R.</span>
+    </div>
+    <div className="testimonial">
+      <p className="quote">“My new go-to weekend spot. Tiramisu latte is a must-try.”</p>
+      <span className="author">– Alex D.</span>
+    </div>
+  </div>
+</section>
+
 
       {/* Review Form */}
       <section id="reviews" className="section review-section">
