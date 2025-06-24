@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Menu.css';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const menuItems = {
   Drinks: [
@@ -94,7 +95,6 @@ const Menu = () => {
             <div key={title} className="menu-card animated-card">
               <div className="card-image-wrapper">
                 <img src={image} alt={title} className="menu-image" />
-                <div className="card-hover-text">Add to Favorites ❤️</div>
               </div>
               <div className="menu-content">
                 <h3 className="item-title">{title}</h3>
@@ -105,13 +105,7 @@ const Menu = () => {
           ))}
         </div>
       </section>
-
-      <footer className="menu-footer">
-        <p>© 2025 The Moody Brewer | Crafted with ❤️ in Rhode Island</p>
-        <p className="footer-credit">
-          Website by <a href="https://volatile-solutions.netlify.app/" target="_blank" rel="noopener noreferrer">Volatile | Solutions</a>
-        </p>
-      </footer>
+          < Footer />
     </div>
   );
 };
