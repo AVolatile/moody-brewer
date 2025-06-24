@@ -35,6 +35,7 @@
   margin: 0 auto;
   text-align: center;
 }
+
 .section-heading,
 .section-subtitle,
 .category-title,
@@ -42,36 +43,62 @@
   font-family: 'Dancing Script', cursive;
 }
 
-
 .section-heading {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   color: #fddbb0;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #fbd3c2; }
+  to { text-shadow: 0 0 20px #f8a1b0, 0 0 30px #f0a3a3; }
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 3rem;
   color: #ffb1c1;
   font-style: italic;
 }
 
-.menu-category-block {
-  margin-bottom: 3rem;
+.category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  z-index: 2;
 }
 
-.category-title {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #f0a3a3;
-  border-bottom: 1px solid #f0a3a3;
-  display: inline-block;
-  padding-bottom: 0.3rem;
+.filter-btn {
+  background-color: transparent;
+  border: 1px solid #f5c79d;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: #f5c79d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #f5c79d;
+  color: #2c1c1c;
+  font-weight: bold;
+}
+
+.menu-marquee {
+  margin: 2rem auto;
+  color: #ffb1c1;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -79,14 +106,64 @@
 .menu-card {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.5rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .menu-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card-image-wrapper {
+  position: relative;
+}
+
+.card-hover-text {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fbd3c2;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-card:hover .card-hover-text {
+  opacity: 1;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInImage 1s ease forwards;
+}
+
+@keyframes fadeInImage {
+  to {
+    opacity: 1;
+  }
 }
 
 .menu-content h3 {
@@ -115,29 +192,29 @@
   background: rgba(43, 26, 30, 0.7);
   margin-top: 4rem;
 }
-.menu-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-/* Menu Card Image Styles */
-.menu-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  animation: fadeInImage 1s ease forwards;
-}
 
-/* Optional Fade-In Animation */
-@keyframes fadeInImage {
-  to {
-    opacity: 1;
+@media (max-width: 600px) {
+  .section {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+  }
+
+  .menu-card {
+    padding: 1rem;
+  }
+
+  .menu-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .menu-content p {
+    font-size: 0.95rem;
+  }
+
+  .menu-content .price {
+    font-size: 1rem;
   }
 }

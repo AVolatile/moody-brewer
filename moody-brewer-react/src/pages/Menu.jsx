@@ -53,8 +53,11 @@ const menuItems = {
   ]
 };
 
-
 const Menu = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
+  const allItems = Object.values(menuItems).flat();
+  const filteredItems = activeCategory === 'All' ? allItems : menuItems[activeCategory];
+
   return (
     <div className="menu-page">
       <div className="video-bg">
@@ -67,36 +70,48 @@ const Menu = () => {
       <Navbar />
 
       <section className="section menu-section">
-        <h1 className="section-heading">Crafted with Soul</h1>
-        <p className="section-subtitle">Explore our menu—each item brewed with love and intention.</p>
+        <h1 className="section-heading animated-glow">Crafted with Soul</h1>
+        <p className="section-subtitle">Explore our menu — infused with creativity and love.</p>
 
-        {Object.entries(menuItems).map(([category, items]) => (
-          <div key={category} className="menu-category-block">
-            <h2 className="category-title">{category}</h2>
-            <div className="menu-grid">
-              {items.map(({ title, desc, price, image }) => (
-  <div key={title} className="menu-card">
-    <img src={image} alt={title} className="menu-image" />
-    <div className="menu-content">
-      <h3 className="item-title">{title}</h3>
-      <p className="item-desc">{desc}</p>
-      <span className="price">{price}</span>
-    </div>
-  </div>
-))}
+        <div className="category-filters">
+          {['All', ...Object.keys(menuItems)].map(cat => (
+            <button
+              key={cat}
+              className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
 
+        <div className="menu-marquee">
+          <marquee scrollamount="6">✨ New Arrivals • Hand-Crafted Brews • Locally Sourced ✨</marquee>
+        </div>
 
+        <div className="menu-grid">
+          {filteredItems.map(({ title, desc, price, image }) => (
+            <div key={title} className="menu-card animated-card">
+              <div className="card-image-wrapper">
+                <img src={image} alt={title} className="menu-image" />
+                <div className="card-hover-text">Add to Favorites ❤️</div>
+              </div>
+              <div className="menu-content">
+                <h3 className="item-title">{title}</h3>
+                <p className="item-desc">{desc}</p>
+                <span className="price">{price}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
-      <footer className="home-footer">
-  <p>© 2025 The Moody Brewer | Crafted with ❤️ in Rhode Island</p>
-  <p className="footer-credit">
-    Website by <a href="https://volatile-solutions.netlify.app/" target="_blank" rel="noopener noreferrer">Volatile | Solutions</a>
-  </p>
-</footer>
+      <footer className="menu-footer">
+        <p>© 2025 The Moody Brewer | Crafted with ❤️ in Rhode Island</p>
+        <p className="footer-credit">
+          Website by <a href="https://volatile-solutions.netlify.app/" target="_blank" rel="noopener noreferrer">Volatile | Solutions</a>
+        </p>
+      </footer>
     </div>
   );
 };
