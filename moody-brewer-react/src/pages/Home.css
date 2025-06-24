@@ -558,7 +558,8 @@ button, input, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -4rem;
+  margin-top: -2rem;  /* Reduced top margin to bring everything closer */
+  gap: 1rem;  /* Added gap between elements (title, subtitle, button) */
 }
 
 .hero-title {
@@ -566,20 +567,20 @@ button, input, textarea {
   font-family: 'Dancing Script', cursive;
   color: #fddbb0;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  margin: 0.5rem 0 0;
+  margin: 0;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   color: #ffb1c1;
-  margin-top: 1rem;
+  margin-top: 0.5rem;  /* Reduced margin for better spacing */
   font-style: italic;
 }
 
 .hero-button {
   display: inline-block;
-  margin-top: srem;
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;  /* Reduced margin between the button and subtitle */
+  margin-bottom: 0.5rem;  /* Adjust button bottom margin */
   padding: 0.75rem 2rem;
   background-color: #e86f92;
   color: #fff;
@@ -595,9 +596,9 @@ button, input, textarea {
   background-color: #c26b7b;
 }
 
-/* About Snippet - Truly Clean Layout */
+/* About Snippet - Text and Button section */
 .about-snippet {
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;  /* Reduced padding to make the section tighter */
   width: 100%;
 }
 
@@ -606,11 +607,9 @@ button, input, textarea {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  width: 100%;
+  gap: 3rem;  /* Reduced gap between elements */
 }
 
-/* Text Section */
 .about-text {
   flex: 1 1 500px;
   color: #fbd3c2;
@@ -619,73 +618,52 @@ button, input, textarea {
   margin: 0;
 }
 
-.hero-title {
-  font-size: 3rem;
-  font-family: 'Dancing Script', cursive;
-  color: #ffe1c5;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.2;
+/* Review Form */
+.review-form {
+  background: rgba(107, 61, 68, 0);
+  padding: 2rem;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  max-width: 700px;
+  margin: 2rem auto;  /* Reduced top margin to bring the form closer */
 }
 
-.hero-subtitle {
-  font-size: 1.3rem;
-  color: #e86f92;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-}
-
-.snippet-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  color: #fbd3c2;
-}
-
-/* Button */
-.hero-button {
-  background: none;
-  color: #e86f92;
-  font-weight: bold;
-  padding: 0.6rem 1.2rem;
-  border: 2px solid #e86f92;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #e86f92;
-  color: #2b1a1e;
-}
-
-/* Image Section */
-.about-image-frame {
-  flex: 1 1 400px;
+/* Review Form Heading */
+.review-form h2 {
   text-align: center;
-  padding: 0;
-  margin: 0;
+  font-size: 2rem;
+  color: #f5c79d;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
-.about-image-frame img {
-  max-width: 250px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+.review-form form input,
+.review-form form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff17;
+  color: #f5c79d;
+  border: 1px solid #99151500;
+  border-radius: 8px;
 }
 
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    text-align: center;
-  }
+.review-form form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #e86f92;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.review-form form button:hover {
+  background-color: #c26b7b;
+}
 
 /* Success Message (Review) */
 .success-message,
@@ -709,6 +687,7 @@ button, input, textarea {
   background-color: #f4c285;
   color: #5a3c11;
 }
+
 
 /* Optional: Fade-in animation */
 @keyframes fadeIn {
