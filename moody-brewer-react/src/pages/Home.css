@@ -488,7 +488,6 @@ button, input, textarea {
   margin-top: -3.5rem;
   color: #f5c79d;
   font-weight: 700;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 /* Featured Cards */
@@ -995,6 +994,10 @@ button, input, textarea {
   width: 100vw;
   overflow: hidden;
 }
+.section-heading {
+  text-shadow: none !important;
+}
+
 
 @media (min-width: 768px) {
   .cheers-banner {
